@@ -15,8 +15,6 @@ function WebcamCapture() {
 
     const capture = useCallback(() => {
         const imageSrc = webcamRef.current.getScreenshot();
-        console.log((imageSrc));
-        setImage(imageSrc)
     }, [webcamRef])
     return (
         <div className='webcamCapture'>
@@ -33,7 +31,7 @@ function WebcamCapture() {
                 onClick={capture}
                 fontsize="Large"
             />
-            <img src={image} alt=""/>
+          
         </div>
     )
 }
