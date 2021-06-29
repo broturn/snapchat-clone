@@ -10,7 +10,7 @@ function App() {
       <Router>
         <div className="app__body">
           <Switch>
-          <Route exact path="/preview">
+            <Route exact path="/preview">
               <Preview />
             </Route>
             <Route exact path="/">
