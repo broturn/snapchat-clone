@@ -1,6 +1,7 @@
 import { Avatar } from "@material-ui/core";
 import { ChatBubble, Search } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
+import Chat from "./Chat";
 import "./Chats.css";
 import { db } from "./firebase";
 
@@ -30,10 +31,26 @@ function Chats() {
         </div>
         <ChatBubble className="chats__chatIcon" />
       </div>
-      <div className="chats__posts"></div>
+      <div className="chats__posts">
+        {posts.map(
+          ({
+            id,
+            data: { profilePic, username, timestamp, imageUrl, read },
+          }) => (
+            <Chat
+              key={id}
+              id={id}
+              username={username}
+              timestamp={timestamp}
+              imageUrl={imageUrl}
+              read={read}
+              profilePic={profilePic}
+            />
+          )
+        )}
+      </div>
     </div>
   );
 }
 
 export default Chats;
-// 2:00:30
