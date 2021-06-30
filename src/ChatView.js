@@ -6,7 +6,7 @@ import { selectSelectedImage } from "./features/appSlice";
 
 function ChatView() {
   const selectedImage = useSelector(selectSelectedImage);
-  const history = useHistory;
+  const history = useHistory();
 
   useEffect(() => {
     if (!selectedImage) {
