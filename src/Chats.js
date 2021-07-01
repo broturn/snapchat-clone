@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import Chat from "./Chat";
 import "./Chats.css";
 import { selectUser } from "./features/appSlice";
+import { resetCameraImage } from "./features/cameraSlice";
 import { auth, db } from "./firebase";
 
 function Chats() {
@@ -28,6 +29,7 @@ function Chats() {
   }, []);
 
   const takeSnap = () => {
+    dispatch(resetCameraImage());
     history.push("/");
   };
 
