@@ -12,7 +12,7 @@ function Chats() {
   const [posts, setPosts] = useState([]);
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
-  const history = useHistory()
+  const history = useHistory();
 
   useEffect(() => {
     db.collection("posts")
@@ -28,7 +28,7 @@ function Chats() {
   }, []);
 
   const takeSnap = () => {
-    history.push("/")
+    history.push("/");
   };
 
   return (
@@ -40,7 +40,7 @@ function Chats() {
           className="chats__avatar"
         />
         <div className="chats__search">
-          <Search />
+          <Search className="chats__searchIcon" />
           <input placeholder="Friends" type="text" />
         </div>
         <ChatBubble className="chats__chatIcon" />
