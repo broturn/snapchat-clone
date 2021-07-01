@@ -7,6 +7,7 @@ import Chats from "./Chats";
 import ChatView from "./ChatView";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "./features/appSlice";
+import Login from "./Login";
 
 function App() {
   const user = useSelector(selectUser);
